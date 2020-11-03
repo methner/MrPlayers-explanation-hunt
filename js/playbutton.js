@@ -10,7 +10,7 @@ class Playbutton {
   
     //   define the collision function
     collision(playerInfo) {
-      console.log("this will be the collision", playerInfo);
+      //console.log("this will be the collision", playerInfo);
       let playbuttonX = this.x + this.width / 2;
       let playbuttonY = this.y + this.height / 2;
       let playerX = playerInfo.x + playerInfo.width / 2;

@@ -23,7 +23,7 @@ class Player {
     jump() {
       if (this.y === height - this.height) {
         this.velocity = -11;
-        console.log("this will be the jump");
+        //console.log("this will be the jump");
       }
     }
   }
