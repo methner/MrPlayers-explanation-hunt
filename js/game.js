@@ -1,3 +1,5 @@
+let score = 0;
+
 class Game {
     constructor() {}
     preloadGame() {
@@ -46,20 +48,19 @@ class Game {
       //score
       fill(255, 255, 255, 100);
         textSize(24);
-        text(`Gingercat: ${gameScore1}`, 50, 40);
+        text(`Your score is ${score} points`, 50, 40);
 
-        //player 2 score
-        fill(255, 255, 255, 100);
-        textSize(24);
-        text(`Blackcat: ${gameScore2}`, 850, 40);
 
   
       this.playbuttons.forEach(function (playbutton) {
         playbutton.drawPlaybutton();
       });
-      //  call the draw functions for the player + the background
+      //  collision with playbuttons
       this.playbuttons = this.playbuttons.filter((playbutton) => {
         if (playbutton.collision(this.player)) {
+          if (score >= 200) {
+            this.winPlayer();
+          }
           return false;
         } else {
           return true;
