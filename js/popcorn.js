@@ -10,18 +10,18 @@ class Popcorn {
   
     //   define the collision function
     collision(playerInfo) {
-      console.log("this will be the popcorn collision", playerInfo);
+      //console.log("this will be the popcorn collision", playerInfo);
       let popcornX = this.x + this.width / 2;
       let popcornY = this.y + this.height / 2;
       let playerX = playerInfo.x + playerInfo.width / 2;
       let playerY = playerInfo.y + playerInfo.height / 2;
   
       if (dist(popcornX, popcornY, playerX, playerY) > 50) {
-        console.log(game.player.score);
+        //console.log(game.player.score);
         return false;
       } else {
-        game.player.score -= 10;
-        
+        game.score -= 10;
+        console.log('whatecer popcorn');
         return true;
       }
     }

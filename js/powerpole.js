@@ -19,7 +19,7 @@ class Powerpole {
         console.log(game.player.score);
         return false;
       } else {
-        game.player.score -= 100;
+        game.losePlayer();
         
         return true;
       }

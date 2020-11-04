@@ -17,11 +17,11 @@ class Playbutton {
       let playerY = playerInfo.y + playerInfo.height / 2;
   
       if (dist(playbuttonX, playbuttonY, playerX, playerY) > 50) {
-        console.log(game.player.score);
+        //console.log(game.player.score);
         return false;
       } else {
-        game.player.score += 10;
-        
+        game.score += 10;
+        console.log('whatever');
         return true;
       }
     }

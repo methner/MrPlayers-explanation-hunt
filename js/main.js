@@ -16,6 +16,9 @@ function keyPressed() {
   if (keyCode === 38) {
     game.player.jump();
   }
+ // if (keyCode === 40) {
+    // restartGame();
+ // }
   //if (keyCode === 40) {
   //    game.player.jump(); //edit to opposite of jump
   //}

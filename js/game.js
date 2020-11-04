@@ -1,4 +1,4 @@
-let score = 0;
+
 
 class Game {
     constructor() {}
@@ -15,6 +15,7 @@ class Game {
       this.playbuttonImage = loadImage("../assets/playbutton/playbutton.png");
       this.popcornImage = loadImage("../assets/popcorn/popcorn.png");
       this.powerpoleImage = loadImage("../assets/powerpole/powerpole.png");
+      this.score = 0;
       //console.log("Here is the popcorn:", this.popcornImage);
     }
     setupGame() {
@@ -48,7 +49,7 @@ class Game {
       //score
       fill(255, 255, 255, 100);
         textSize(24);
-        text(`Your score is ${score} points`, 50, 40);
+        text(`Your score is ${this.score} points`, 50, 40);
 
 
   
@@ -58,13 +59,27 @@ class Game {
       //  collision with playbuttons
       this.playbuttons = this.playbuttons.filter((playbutton) => {
         if (playbutton.collision(this.player)) {
-          if (score >= 200) {
-            this.winPlayer();
-          }
           return false;
         } else {
           return true;
         }
+
+
+
+        if (playbutton.collision(this.player)) {
+          console.log("this is score", score)
+          
+          if (score >= 200) {
+            this.winPlayer();
+          }
+          return false
+       
+        } 
+        // else {
+        //   score++;
+        //   //console.log('playbutton score')
+        //   return true;
+        // }
       });
       // define the obstacle drawing logic + add a new obstacle to  the array in the constructor with the image passed into it
       
@@ -104,7 +119,7 @@ class Game {
       frameRate(0);       
       this.winRectangle();
       text(`You win! 
-      Press any key to replay the game`, width/2, height/2);
+      Press space to replay game`, width/2, height/2);
 
       // game.setupGame();
   }
@@ -113,7 +128,7 @@ class Game {
       frameRate(0);       
       this.winRectangle();
       text(`You lose! 
-      Press any key to replay the game`, width/2, height/2);
+      Press space to replay game`, width/2, height/2);
 
       // game.setupGame();
   }
@@ -125,6 +140,14 @@ class Game {
       textSize(48);
       textAlign(CENTER,CENTER)
   }
+
+    loseRectangle (){
+      fill(0,0,0);
+      rect(width/3, height/3, 333, 267, 20, 20, 20, 20);
+      fill(255, 255, 255, 100);
+      textSize(48);
+      textAlign(CENTER,CENTER)
+}
 
   } // end class
   //|| playbutton.x < 0
