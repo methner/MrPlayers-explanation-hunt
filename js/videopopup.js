@@ -21,8 +21,7 @@ class Videopopup {
         return false;
       } else {
         game.score += 20;
-        this.counter = this.counter + 1;
-        console.log(this.counter);
+        this.counter++; 
         return true;
       }
     }
@@ -30,8 +29,8 @@ class Videopopup {
     drawVideopopup() {
       this.x--;
       image(this.image, this.x, this.y, this.width, this.height);
-      if (this.counter % 4 === 0) {
-        rect(30, 20, 55, 55);
+      if (this.counter % 1 === 0) {
+        rect(900, 20, 55, 55);
       }
     }
 
