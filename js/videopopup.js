@@ -6,22 +6,24 @@ class Videopopup {
       this.width = 50;
       this.height = 50;
       this.counter = 0;
+      this.urls = ["https://youtu.be/8q7_aV8eLUE", "https://youtu.be/Gbv2BIi9i58", "https://youtu.be/4WPHbzNfzKA", ]
     }
   
-   // collision function
     collision(playerInfo) {
-      //console.log("this will be the collision", playerInfo);
       let videopopupX = this.x + this.width / 2;
       let videopopupY = this.y + this.height / 2;
       let playerX = playerInfo.x + playerInfo.width / 2;
       let playerY = playerInfo.y + playerInfo.height / 2;
   
       if (dist(videopopupX, videopopupY, playerX, playerY) > 50) {
-        //console.log(game.player.score);
         return false;
       } else {
         game.score += 20;
         this.counter++; 
+        console.log(this.counter);
+        let randomIndex = Math.floor(Math.random() * this.urls.length-1);
+        let url = this.urls[randomIndex]
+        window.open(url)
         return true;
       }
     }

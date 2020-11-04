@@ -125,7 +125,7 @@ class Game {
       frameRate(0);       
       this.winRectangle();
       text(`Game Over! 
-      Press Space to try again`, width/2, height/2);
+      Press Space to restart`, width/2, height/2);
       game.preloadGame();
       game.setupGame();
 
@@ -141,10 +141,10 @@ class Game {
   }
 
     loseRectangle (){
-      fill(1,2,3);
+      fill('red');
       rect(width/2, height/2, 55, 55, 20);
-      fill('orange');
-      textSize(48);
+      fill('red');
+      textSize(35);
       textAlign(CENTER,CENTER)
 }
 
