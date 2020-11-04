@@ -42,6 +42,17 @@ class Game {
       if (frameCount % 2700 === 0) {
         this.powerpoles.push(new Powerpole(this.powerpoleImage));
       }
+
+      //score
+      fill(255, 255, 255, 100);
+        textSize(24);
+        text(`Gingercat: ${gameScore1}`, 50, 40);
+
+        //player 2 score
+        fill(255, 255, 255, 100);
+        textSize(24);
+        text(`Blackcat: ${gameScore2}`, 850, 40);
+
   
       this.playbuttons.forEach(function (playbutton) {
         playbutton.drawPlaybutton();
