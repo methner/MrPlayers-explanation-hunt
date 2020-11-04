@@ -16,8 +16,8 @@ function keyPressed() {
   if (keyCode === 38) {
     game.player.jump();
   }
- // if (keyCode === 32) {
-    // restartGame();
- // }
+ if (keyCode === 32) {
+ location.reload();
+ }
  
 } // end preload 

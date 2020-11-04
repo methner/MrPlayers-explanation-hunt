@@ -125,8 +125,7 @@ class Game {
       frameRate(0);       
       this.winRectangle();
       text(`Game Over! 
-      Reload page 
-      to try again`, width/2, height/2);
+      Press Space to try again`, width/2, height/2);
       game.preloadGame();
       game.setupGame();
 
