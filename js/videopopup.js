@@ -5,8 +5,7 @@ class Videopopup {
       this.y = (Math.random() * height) / 2;
       this.width = 50;
       this.height = 50;
-      this.counter = 0;
-      this.urls = ["https://youtu.be/8q7_aV8eLUE", "https://youtu.be/Gbv2BIi9i58", "https://youtu.be/4WPHbzNfzKA", ]
+      this.urls = ["https://youtu.be/F9YH0n0eI-k", "https://youtu.be/axs2amXT6FM", "https://youtu.be/18qpcSwdRk0", "https://youtu.be/8q7_aV8eLUE", "https://youtu.be/Gbv2BIi9i58", "https://youtu.be/4WPHbzNfzKA"]
     }
   
     collision(playerInfo) {
@@ -19,11 +18,9 @@ class Videopopup {
         return false;
       } else {
         game.score += 20;
-        this.counter++; 
-        console.log(this.counter);
         let randomIndex = Math.floor(Math.random() * this.urls.length-1);
-        let url = this.urls[randomIndex]
-        window.open(url)
+        let url = this.urls[randomIndex];
+        window.open(url);
         return true;
       }
     }
@@ -31,9 +28,6 @@ class Videopopup {
     drawVideopopup() {
       this.x--;
       image(this.image, this.x, this.y, this.width, this.height);
-      if (this.counter % 1 === 0) {
-        rect(900, 20, 55, 55);
-      }
     }
 
   } //class end

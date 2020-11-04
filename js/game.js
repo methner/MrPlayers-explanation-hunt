@@ -54,7 +54,9 @@ class Game {
         textSize(24);
         text(`Your score is ${this.score} points`, 50, 40);
 
-
+      if (this.score > 100) {
+        this.winPlayer();
+      }
   
       this.playbuttons.forEach(function (playbutton) {
         playbutton.drawPlaybutton();
@@ -114,8 +116,8 @@ class Game {
     winPlayer() {
       frameRate(0);       
       this.winRectangle();
-      text(`You win! 
-      Reload page to beat your score`, width/2, height/2);
+      text(`Congrats Winner! 
+      Press Space to play again`, width/2, height/2);
       
 
       // game.setupGame();
@@ -126,8 +128,6 @@ class Game {
       this.winRectangle();
       text(`Game Over! 
       Press Space to restart`, width/2, height/2);
-      game.preloadGame();
-      game.setupGame();
 
       // game.setupGame();
   }

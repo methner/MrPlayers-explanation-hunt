@@ -8,7 +8,7 @@ class Player {
       this.y = height - this.height;
       this.gravity = 0.12;
       this.velocity = 1;
-      this.score = 0;
+      //this.score = 0;
     }
     drawPlayer() {
       this.velocity += this.gravity;
