@@ -16,7 +16,6 @@ class Powerpole {
       let playerY = playerInfo.y + playerInfo.height / 2;
   
       if (dist(powerpoleX, powerpoleY, playerX, playerY) > 50) {
-        //console.log(game.player.score);
         return false;
       } else {
         game.losePlayer();
