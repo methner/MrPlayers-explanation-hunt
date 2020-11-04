@@ -3,11 +3,11 @@ class Game {
     preloadGame() {
       //console.log("this is the game preload");
       this.backgroundImages = [
-        { src: loadImage("../assets/background/turkis-1.png"), x: 0, speed: 0 },
-        { src: loadImage("../assets/background/orange-2.png"), x: 0, speed: 1 },
-        { src: loadImage("../assets/background/orange-3.png"), x: 0, speed: 2 },
-        { src: loadImage("../assets/background/plx-4.png"), x: 0, speed: 3 },
-        { src: loadImage("../assets/background/plx-5.png"), x: 0, speed: 4 },
+        { src: loadImage("../assets/background/mountain-0.png"), x: 0, speed: 0 },
+        { src: loadImage("../assets/background/mountain-1.png"), x: 0, speed: 1 },
+        { src: loadImage("../assets/background/mountain-2.png"), x: 0, speed: 2 },
+        { src: loadImage("../assets/background/mountain-3.png"), x: 0, speed: 3 },
+        { src: loadImage("../assets/background/mountain-5.png"), x: 0, speed: 4 },
       ];
       this.playerImage = loadImage("../assets/player/mr-player-fly.png");
       this.playbuttonImage = loadImage("../assets/playbutton/playbutton.png");
@@ -79,7 +79,40 @@ class Game {
           return true;
         }
       });
-    
-    }
+      
+
+        //stroke('#ffcc00');
+        //fill (0,0,0);
+
+
+
+    } //end draw
+
+    winPlayer() {
+      frameRate(0);       
+      this.winRectangle();
+      text(`You win! 
+      Press any key to replay the game`, width/2, height/2);
+
+      // game.setupGame();
   }
+
+    losePlayer() {
+      frameRate(0);       
+      this.winRectangle();
+      text(`You lose! 
+      Press any key to replay the game`, width/2, height/2);
+
+      // game.setupGame();
+  }
+
+    winRectangle (){
+      fill(0,0,0);
+      rect(width/3, height/3, 333, 267, 20, 20, 20, 20);
+      fill(255, 255, 255, 100);
+      textSize(48);
+      textAlign(CENTER,CENTER)
+  }
+
+  } // end class
   //|| playbutton.x < 0
