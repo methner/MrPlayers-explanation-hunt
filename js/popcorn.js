@@ -21,7 +21,6 @@ class Popcorn {
         return false;
       } else {
         game.score -= 10;
-        console.log('whatecer popcorn');
         return true;
       }
     }

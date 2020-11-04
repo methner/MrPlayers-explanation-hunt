@@ -21,7 +21,6 @@ class Playbutton {
         return false;
       } else {
         game.score += 10;
-        console.log('whatever');
         return true;
       }
     }

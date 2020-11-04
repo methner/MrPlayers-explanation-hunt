@@ -65,21 +65,6 @@ class Game {
         }
 
 
-
-        if (playbutton.collision(this.player)) {
-          console.log("this is score", score)
-          
-          if (score >= 200) {
-            this.winPlayer();
-          }
-          return false
-       
-        } 
-        // else {
-        //   score++;
-        //   //console.log('playbutton score')
-        //   return true;
-        // }
       });
       // define the obstacle drawing logic + add a new obstacle to  the array in the constructor with the image passed into it
       
@@ -108,9 +93,6 @@ class Game {
       });
       
 
-        //stroke('#ffcc00');
-        //fill (0,0,0);
-
 
 
     } //end draw
@@ -120,6 +102,7 @@ class Game {
       this.winRectangle();
       text(`You win! 
       Press space to replay game`, width/2, height/2);
+      
 
       // game.setupGame();
   }
@@ -127,8 +110,10 @@ class Game {
     losePlayer() {
       frameRate(0);       
       this.winRectangle();
-      text(`You lose! 
-      Press space to replay game`, width/2, height/2);
+      text(`Game Over! 
+      Press space to try again`, width/2, height/2);
+      game.preloadGame();
+      game.setupGame();
 
       // game.setupGame();
   }
@@ -142,9 +127,9 @@ class Game {
   }
 
     loseRectangle (){
-      fill(0,0,0);
-      rect(width/3, height/3, 333, 267, 20, 20, 20, 20);
-      fill(255, 255, 255, 100);
+      fill(1,2,3);
+      rect(width/2, height/2, 55, 55, 20);
+      fill('orange');
       textSize(48);
       textAlign(CENTER,CENTER)
 }
