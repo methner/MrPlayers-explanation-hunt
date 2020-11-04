@@ -1,5 +1,3 @@
-
-
 class Game {
     constructor() {}
     preloadGame() {
@@ -13,18 +11,18 @@ class Game {
       ];
       this.playerImage = loadImage("../assets/player/mr-player-fly.png");
       this.playbuttonImage = loadImage("../assets/playbutton/playbutton.png");
+      this.videopopupImage = loadImage("../assets/playbutton/videopopup.png");
       this.popcornImage = loadImage("../assets/popcorn/popcorn.png");
       this.powerpoleImage = loadImage("../assets/powerpole/powerpole.png");
       this.score = 0;
-      //console.log("Here is the popcorn:", this.popcornImage);
+     
     }
     setupGame() {
       //console.log("this is the game setup");
-      //  initialize background + player here
-      // NB: we DON'T initialize the coins here because we create them dynamically in the draw
       this.background = new Background(this.backgroundImages);
       this.player = new Player(this.playerImage);
       this.playbuttons = [];
+      this.videopopups = [];
       this.popcorns = [];
       this.powerpoles = [];
     }
@@ -38,6 +36,11 @@ class Game {
         this.playbuttons.push(new Playbutton(this.playbuttonImage));
         //console.log(this.playbuttons);
       }
+
+      if (frameCount % 600 === 0) {
+        this.videopopups.push(new Videopopup(this.videopopupImage));
+      }
+
       if (frameCount % 450 === 0) {
         this.popcorns.push(new Popcorn(this.popcornImage));
       }
@@ -63,10 +66,21 @@ class Game {
         } else {
           return true;
         }
-
-
       });
-      // define the obstacle drawing logic + add a new obstacle to  the array in the constructor with the image passed into it
+      
+      this.videopopups.forEach(function (videopopup) {
+        videopopup.drawVideopopup();
+      });
+   
+      this.videopopups = this.videopopups.filter((videopopup) => {
+        if (videopopup.collision(this.player)) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      
+
       
       this.popcorns.forEach(function (popcorn) {
         popcorn.drawPopcorn();
