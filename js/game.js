@@ -56,7 +56,7 @@ class Game {
 
 
       //winning condition
-      if (this.score > 100) {
+      if (this.score > 10) {
         this.winPlayer();
       }
   
@@ -124,7 +124,7 @@ class Game {
     // lose function
     losePlayer() {
       frameRate(0);       
-      this.winRectangle();
+      this.loseRectangle();
       text(`Game Over! 
       Press Space to restart`, width/2, height/2);
   }
