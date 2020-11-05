@@ -5,7 +5,7 @@ class Videopopup {
       this.y = (Math.random() * height) / 2;
       this.width = 50;
       this.height = 50;
-      this.urls = ["https://youtu.be/F9YH0n0eI-k", "https://youtu.be/axs2amXT6FM", "https://youtu.be/18qpcSwdRk0", "https://youtu.be/8q7_aV8eLUE", "https://youtu.be/Gbv2BIi9i58", "https://youtu.be/4WPHbzNfzKA"]
+      this.urls = ["https://youtu.be/F9YH0n0eI-k", "https://youtu.be/axs2amXT6FM", "https://youtu.be/18qpcSwdRk0", "https://youtu.be/8q7_aV8eLUE", "https://youtu.be/Gbv2BIi9i58", "https://youtu.be/4WPHbzNfzKA", "https://youtu.be/_RaO4y_obYc", "https://youtu.be/mFSwWesKM-w", "https://youtu.be/zt0bR5PWybc"]
     }
   
     collision(playerInfo) {

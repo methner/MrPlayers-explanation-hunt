@@ -144,7 +144,7 @@ class Game {
       fill('#00c0cc');
       textSize(35);
       textAlign(CENTER,CENTER)
-}
+  }
 
   } // end class
   //|| playbutton.x < 0
