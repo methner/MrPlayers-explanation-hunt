@@ -56,7 +56,7 @@ class Game {
 
 
       //winning condition
-      if (this.score > 5) {
+      if (this.score > 100) {
         this.winPlayer();
       }
   
@@ -133,15 +133,15 @@ class Game {
     winRectangle (){
       fill('#00c0cc');
       rect(width/3, height/3, 400, 200, 50, 20, 50, 20);
-      fill('ff9900');
+      fill('#ff9900');
       textSize(35);
       textAlign(CENTER,CENTER)
   }
     // lose popup
     loseRectangle (){
-      fill('red');
-      rect(width/2, height/2, 55, 55, 20);
-      fill('red');
+      fill('#ff9900');
+      rect(width/3, height/3, 400, 200, 50, 50, 50, 50);
+      fill('#00c0cc');
       textSize(35);
       textAlign(CENTER,CENTER)
 }
