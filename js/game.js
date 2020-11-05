@@ -3,17 +3,17 @@ class Game {
     preloadGame() {
       //console.log("this is the game preload");
       this.backgroundImages = [
-        { src: loadImage("../assets/background/mountain-0.png"), x: 0, speed: 0 },
-        { src: loadImage("../assets/background/mountain-1.png"), x: 0, speed: 1 },
-        { src: loadImage("../assets/background/mountain-2.png"), x: 0, speed: 2 },
-        { src: loadImage("../assets/background/mountain-3.png"), x: 0, speed: 3 },
-        { src: loadImage("../assets/background/mountain-5.png"), x: 0, speed: 4 },
+        { src: loadImage("../../assets/background/mountain-0.png"), x: 0, speed: 0 },
+        { src: loadImage("../../assets/background/mountain-1.png"), x: 0, speed: 1 },
+        { src: loadImage("../../assets/background/mountain-2.png"), x: 0, speed: 2 },
+        { src: loadImage("../../assets/background/mountain-3.png"), x: 0, speed: 3 },
+        { src: loadImage("../../assets/background/mountain-5.png"), x: 0, speed: 4 },
       ];
-      this.playerImage = loadImage("../assets/player/mr-player-fly.png");
-      this.playbuttonImage = loadImage("../assets/playbutton/playbutton.png");
-      this.videopopupImage = loadImage("../assets/playbutton/videopopup.png");
-      this.popcornImage = loadImage("../assets/popcorn/popcorn.png");
-      this.powerpoleImage = loadImage("../assets/powerpole/powerpole.png");
+      this.playerImage = loadImage("../../assets/player/mr-player-fly.png");
+      this.playbuttonImage = loadImage("../../assets/playbutton/playbutton.png");
+      this.videopopupImage = loadImage("../../assets/playbutton/videopopup.png");
+      this.popcornImage = loadImage("../../assets/popcorn/popcorn.png");
+      this.powerpoleImage = loadImage("../../assets/powerpole/powerpole.png");
       this.score = 0;
      
     }
