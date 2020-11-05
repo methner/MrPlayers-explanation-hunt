@@ -56,7 +56,7 @@ class Game {
 
 
       //winning condition
-      if (this.score > 10) {
+      if (this.score > 5) {
         this.winPlayer();
       }
   
@@ -118,7 +118,7 @@ class Game {
       frameRate(0);       
       this.winRectangle();
       text(`Congrats Winner! 
-      Press Space to play again`, width/2, height/2);
+      Press Space to restart`, width/2, height/2);
   }
 
     // lose function
@@ -131,10 +131,10 @@ class Game {
 
     // win popup
     winRectangle (){
-      fill(0,0,0);
-      rect(width/3, height/3, 333, 267, 20, 20, 20, 20);
-      fill(255, 255, 255, 100);
-      textSize(48);
+      fill('#00c0cc');
+      rect(width/3, height/3, 400, 200, 50, 20, 50, 20);
+      fill('ff9900');
+      textSize(35);
       textAlign(CENTER,CENTER)
   }
     // lose popup
