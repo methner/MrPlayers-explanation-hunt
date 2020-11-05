@@ -29,5 +29,5 @@ class Playbutton {
       image(this.image, this.x, this.y, this.width, this.height);
     }
 
-  } //class end
+  } // playbutton class end
   

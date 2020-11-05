@@ -28,7 +28,7 @@ class Game {
     }
   
     drawGame() {
-      // console.log("this is the game draw");
+      //console.log("this is the game draw");
       this.background.drawBackground();
       this.player.drawPlayer();
       if (frameCount % 270 === 0) {
@@ -54,6 +54,8 @@ class Game {
         textSize(24);
         text(`Your score is ${this.score} points`, 50, 40);
 
+
+      //winning condition
       if (this.score > 100) {
         this.winPlayer();
       }
@@ -61,7 +63,8 @@ class Game {
       this.playbuttons.forEach(function (playbutton) {
         playbutton.drawPlaybutton();
       });
-      //  collision with playbuttons
+      
+      //collision with playbutton
       this.playbuttons = this.playbuttons.filter((playbutton) => {
         if (playbutton.collision(this.player)) {
           return false;
@@ -73,7 +76,8 @@ class Game {
       this.videopopups.forEach(function (videopopup) {
         videopopup.drawVideopopup();
       });
-   
+      
+      //collision with videopopup
       this.videopopups = this.videopopups.filter((videopopup) => {
         if (videopopup.collision(this.player)) {
           return false;
@@ -82,12 +86,10 @@ class Game {
         }
       });
       
-
-      
       this.popcorns.forEach(function (popcorn) {
         popcorn.drawPopcorn();
       });
-  
+      //collision with popcorn
       this.popcorns = this.popcorns.filter((popcorn) => {
         if (popcorn.collision(this.player)) {
           return false;
@@ -99,7 +101,8 @@ class Game {
       this.powerpoles.forEach(function (powerpole) {
         powerpole.drawPowerpole();
       });
-
+      
+      //collision with powerpole
       this.powerpoles = this.powerpoles.filter((powerpole) => {
         if (powerpole.collision(this.player)) {
           return false;
@@ -107,31 +110,26 @@ class Game {
           return true;
         }
       });
-      
-
-
 
     } //end draw
 
+    // win function
     winPlayer() {
       frameRate(0);       
       this.winRectangle();
       text(`Congrats Winner! 
       Press Space to play again`, width/2, height/2);
-      
-
-      // game.setupGame();
   }
 
+    // lose function
     losePlayer() {
       frameRate(0);       
       this.winRectangle();
       text(`Game Over! 
       Press Space to restart`, width/2, height/2);
-
-      // game.setupGame();
   }
 
+    // win popup
     winRectangle (){
       fill(0,0,0);
       rect(width/3, height/3, 333, 267, 20, 20, 20, 20);
@@ -139,7 +137,7 @@ class Game {
       textSize(48);
       textAlign(CENTER,CENTER)
   }
-
+    // lose popup
     loseRectangle (){
       fill('red');
       rect(width/2, height/2, 55, 55, 20);
