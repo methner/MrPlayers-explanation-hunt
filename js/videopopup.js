@@ -18,7 +18,7 @@ class Videopopup {
         return false;
       } else {
         game.score += 20;
-        let randomIndex = Math.floor(Math.random() * this.urls.length-1);
+        let randomIndex = Math.floor(Math.random() * this.urls.length);
         let url = this.urls[randomIndex];
         window.open(url);
         return true;
